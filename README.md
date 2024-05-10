@@ -39,7 +39,8 @@ def convert_price_to_float(price_str):
     # Remove currency symbols and commas, then convert to float
     clean_price = re.sub(r'[^\d.]', '', price_str)  # Keep digits and decimal point
     return float(clean_price) if clean_price else 0.0
-
+```
+```
 def get_snapdeal_products(search_query):
     url = f'https://www.snapdeal.com/search?keyword={search_query.replace(" ", "%20")}'
     headers = {
@@ -80,7 +81,8 @@ def get_snapdeal_products(search_query):
         print('Failed to retrieve content')
 
     return products_data
-
+```
+```
 # Main execution block
 if __name__ == "__main__":
     search_query = input('Enter product to search on Snapdeal: ')
